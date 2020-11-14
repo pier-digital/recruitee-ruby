@@ -1,0 +1,25 @@
+*.gem
+/.config
+/coverage/
+/pkg/
+/spec/reports/
+/test/tmp/
+/test/version_tmp/
+/tmp/
+/features/shared
+.DS_Store
+
+# Documentation
+/.yardoc/
+/_yardoc/
+/doc/
+/rdoc/
+
+# Environment
+/.bundle/
+/vendor/bundle
+/lib/bundler/man/
+
+Gemfile.lock
+.ruby-version
+.ruby-gemset
