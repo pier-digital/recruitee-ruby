@@ -26,6 +26,10 @@ module Recruitee
       @_candidates ||= API::Candidates.new(self)
     end
 
+    def notes
+      @_notes ||= API::Notes.new(self)
+    end
+
     def interview_events
       @_interview_events ||= API::InterviewEvents.new(self)
     end

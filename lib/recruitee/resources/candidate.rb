@@ -2,6 +2,10 @@
 
 module Recruitee
   class Candidate < Resource
+    def notes
+      @_notes ||= client.notes.list(candidate_id: id)
+    end
+
     def interview_events
       @_interview_events ||= client.interview_events.list(candidate_id: id)
     end
