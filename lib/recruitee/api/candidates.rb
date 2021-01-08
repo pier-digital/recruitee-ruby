@@ -12,7 +12,7 @@ module Recruitee
       end
 
       def find_by_email(email)
-        hits = search_for_email(email)
+        hits = search_for(email)
         # Recruitee's search is very fuzzy, so we need to find the real match
         match = hits.find { |hit| hit['emails'].include?(email) }
 
