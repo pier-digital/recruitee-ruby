@@ -17,6 +17,16 @@ module Recruitee
         initialize_from(payload[resource_name])
       end
 
+      def find(candidate_id:)
+        payload = request(
+          :get,
+          resource_url,
+          params: { candidate_id: candidate_id }
+        )
+
+        initialize_from(payload[resource_name])
+      end
+
       def resource_url
         '/interview/results'
       end
