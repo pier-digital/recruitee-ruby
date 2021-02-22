@@ -27,7 +27,8 @@ module Recruitee
         }
         res = request(:get, '/search/new/quick', params: search)
 
-        res.dig('candidates', 'hits')
+        references = res.dig('references')
+        res.dig('candidates', 'hits').merge(references)
       end
     end
   end
