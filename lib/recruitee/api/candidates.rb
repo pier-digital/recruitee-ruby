@@ -11,12 +11,6 @@ module Recruitee
         super({ offers: offers, candidate: candidate })
       end
 
-      def list(params = {})
-        payload = request(:get, resource_url, params: params)
-  
-        payload["#{resource_name}s"].map { |props| initialize_from(props.merge(payload["references"])) }
-      end
-
       def find_by_email(email)
         hits = search_for(email)
         # Recruitee's search is very fuzzy, so we need to find the real match
